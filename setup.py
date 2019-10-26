@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from setuptools import find_packages, setup
 
 test_requires = [
@@ -7,7 +9,7 @@ test_requires = [
 
 setup(
     name="progressive-cmd",
-    version='0.1',
+    version='0.1.1',
     packages=find_packages(),
     python_requires='>=3.6',
     url='https://github.com/bustawin/progressive-cmd',
@@ -16,6 +18,7 @@ setup(
     author_email='xavier@bustawin.com',
     description='Executes a cmd that outputs completion percentages, interpreting '
                 'them and executing callbacks with the increment and total percentage.',
+    long_description=Path('README.rst').read_text('utf8'),
     extras_require={
         'testing': test_requires,
     },
